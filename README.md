@@ -32,61 +32,6 @@ This Weather App allows users to search for and view current weather conditions 
 - Documentation: https://openweathermap.org/current
 - Weather Icons: https://openweathermap.org/weather-conditions
 
-## React Concepts Demonstrated
-
-1. **State Management**: Using `useState` hook to manage weather data, loading states, and errors
-2. **Effects/Lifecycle**: Using `useEffect` hook to fetch weather data on component mount
-3. **Props**: Passing data between parent (App) and child components (SearchBar, WeatherCard)
-4. **Component Composition**: Breaking down UI into reusable components
-5. **Event Handling**: Managing user interactions (search form submission)
-6. **Conditional Rendering**: Displaying loading, error, or weather data based on state
-
-## Setup Instructions
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-- OpenWeatherMap API key
-
-### Installation Steps
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/101515982_comp3123_labtest2.git
-   cd 101515982_comp3123_labtest2
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Set up API Key**
-
-   - Sign up for a free API key at https://openweathermap.org/api
-   - Create a `.env` file in the root directory
-   - Add your API key:
-     ```
-     REACT_APP_WEATHER_API_KEY=your_api_key_here
-     ```
-   - You can use the `.env.example` file as a template
-
-4. **Run the application**
-
-   ```bash
-   npm start
-   ```
-
-   - The app will open at http://localhost:3000
-
-5. **Build for production**
-   ```bash
-   npm run build
-   ```
-
 ## Project Structure
 
 ```
@@ -107,30 +52,6 @@ This Weather App allows users to search for and view current weather conditions 
 └── README.md                     # Project documentation
 ```
 
-## Components Overview
-
-### App.js
-
-- Main application component
-- Manages application state (weather data, loading, errors)
-- Handles API calls using axios
-- Implements useEffect for initial data fetch
-- Passes props to child components
-
-### SearchBar.js
-
-- Controlled input component
-- Manages local search input state
-- Handles form submission
-- Passes search query to parent via props
-
-### WeatherCard.js
-
-- Displays weather information
-- Receives weather data via props
-- Shows temperature, weather icons, and detailed metrics
-- Responsive grid layout for weather details
-
 ## API Integration Details
 
 The app uses axios to make API calls to OpenWeatherMap:
@@ -143,19 +64,6 @@ const response = await axios.get(API_URL, {
   },
 });
 ```
-
-### Data Displayed:
-
-- City name and country
-- Current temperature (Celsius)
-- Feels like temperature
-- Min/Max temperature
-- Weather condition with icon
-- Humidity percentage
-- Wind speed
-- Atmospheric pressure
-- Visibility
-- Cloudiness percentage
 
 ## 🌐 Live Deployment
 
