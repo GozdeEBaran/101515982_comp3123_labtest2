@@ -1,70 +1,237 @@
-# Getting Started with Create React App
+# 101515982_comp3123_labtest2 - Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React weather application that displays real-time weather information for any city using the OpenWeatherMap API.
 
-## Available Scripts
+## Student Information
+- **Student ID**: 101515982
+- **Course**: COMP3123 - Full Stack Development
+- **Lab Test**: Lab Test 2
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+This Weather App allows users to search for and view current weather conditions for any city worldwide. The application features a clean, modern UI with gradient backgrounds, smooth animations, and comprehensive weather details including temperature, humidity, wind speed, pressure, visibility, and cloudiness.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🌤️ Real-time weather data from OpenWeatherMap API
+- 🔍 Search functionality for any city worldwide
+- 🌡️ Temperature display in Celsius
+- 💨 Comprehensive weather details (humidity, wind speed, pressure, visibility, cloudiness)
+- 🎨 Beautiful gradient UI with smooth animations
+- 📱 Fully responsive design for mobile and desktop
+- 🖼️ Weather condition icons from OpenWeatherMap
+- 🌍 Default location: Ankara, Turkey
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** (v18) - Frontend framework
+- **Axios** - HTTP client for API requests
+- **OpenWeatherMap API** - Weather data provider
+- **CSS3** - Styling with gradients and animations
+- **React Hooks** - useState, useEffect for state management
 
-### `npm run build`
+## API Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**OpenWeatherMap API** - Current Weather Data
+- API Endpoint: `https://api.openweathermap.org/data/2.5/weather`
+- Documentation: https://openweathermap.org/current
+- Weather Icons: https://openweathermap.org/weather-conditions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## React Concepts Demonstrated
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **State Management**: Using `useState` hook to manage weather data, loading states, and errors
+2. **Effects/Lifecycle**: Using `useEffect` hook to fetch weather data on component mount
+3. **Props**: Passing data between parent (App) and child components (SearchBar, WeatherCard)
+4. **Component Composition**: Breaking down UI into reusable components
+5. **Event Handling**: Managing user interactions (search form submission)
+6. **Conditional Rendering**: Displaying loading, error, or weather data based on state
 
-### `npm run eject`
+## Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- OpenWeatherMap API key
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation Steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/101515982_comp3123_labtest2.git
+   cd 101515982_comp3123_labtest2
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Set up API Key**
+   - Sign up for a free API key at https://openweathermap.org/api
+   - Create a `.env` file in the root directory
+   - Add your API key:
+     ```
+     REACT_APP_WEATHER_API_KEY=your_api_key_here
+     ```
+   - You can use the `.env.example` file as a template
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Run the application**
+   ```bash
+   npm start
+   ```
+   - The app will open at http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+101515982_comp3123_labtest2/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── SearchBar.js          # Search input component
+│   │   ├── SearchBar.css         # Search bar styling
+│   │   ├── WeatherCard.js        # Weather display component
+│   │   └── WeatherCard.css       # Weather card styling
+│   ├── App.js                    # Main application component
+│   ├── App.css                   # Global app styling
+│   └── index.js                  # React entry point
+├── .env.example                  # Environment variable template
+├── .gitignore                    # Git ignore file
+├── package.json                  # Project dependencies
+└── README.md                     # Project documentation
+```
 
-### Analyzing the Bundle Size
+## Components Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### App.js
+- Main application component
+- Manages application state (weather data, loading, errors)
+- Handles API calls using axios
+- Implements useEffect for initial data fetch
+- Passes props to child components
 
-### Making a Progressive Web App
+### SearchBar.js
+- Controlled input component
+- Manages local search input state
+- Handles form submission
+- Passes search query to parent via props
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### WeatherCard.js
+- Displays weather information
+- Receives weather data via props
+- Shows temperature, weather icons, and detailed metrics
+- Responsive grid layout for weather details
 
-### Advanced Configuration
+## API Integration Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The app uses axios to make API calls to OpenWeatherMap:
 
-### Deployment
+```javascript
+const response = await axios.get(API_URL, {
+  params: {
+    q: city,
+    appid: API_KEY
+  }
+});
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Data Displayed:
+- City name and country
+- Current temperature (Celsius)
+- Feels like temperature
+- Min/Max temperature
+- Weather condition with icon
+- Humidity percentage
+- Wind speed
+- Atmospheric pressure
+- Visibility
+- Cloudiness percentage
 
-### `npm run build` fails to minify
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Main Interface - Ankara, Turkey
+![Weather App - Ankara](screenshots/ankara-weather.png)
+
+### Search Functionality
+![Search Feature](screenshots/search-feature.png)
+
+### Weather Details
+![Weather Details](screenshots/weather-details.png)
+
+### Mobile Responsive View
+![Mobile View](screenshots/mobile-view.png)
+
+### Error Handling
+![Error State](screenshots/error-handling.png)
+
+## Postman API Testing
+
+The following screenshots demonstrate API testing using Postman:
+
+### Successful API Response - Ankara
+![Postman Ankara](screenshots/postman-ankara.png)
+
+### API Response Structure
+![Postman Response](screenshots/postman-response-structure.png)
+
+## Deployment
+
+The application is hosted on: **[DEPLOYMENT_URL_HERE]**
+
+Deployment platforms used: Vercel / Railway / Render
+
+### Deployment Steps (Vercel):
+1. Push code to GitHub
+2. Connect GitHub repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy
+
+## UI/UX Features
+
+- **Gradient Background**: Purple-blue gradient for modern look
+- **Glass Morphism**: Semi-transparent cards with backdrop blur
+- **Smooth Animations**: Hover effects and transitions
+- **Weather Icons**: Dynamic icons from OpenWeatherMap
+- **Responsive Grid**: Adapts to different screen sizes
+- **Loading States**: Spinner animation during data fetch
+- **Error Handling**: User-friendly error messages
+- **Custom Icons**: SVG icons for weather details
+
+## Browser Compatibility
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Known Issues / Future Improvements
+
+- [ ] Add 5-day weather forecast
+- [ ] Implement geolocation for automatic city detection
+- [ ] Add temperature unit toggle (Celsius/Fahrenheit)
+- [ ] Add weather history and favorites
+- [ ] Implement dark/light mode toggle
+
+## License
+
+This project is created for educational purposes as part of COMP3123 Lab Test 2.
+
+## Contact
+
+For questions or issues, contact:
+- Email: pritesh.patel2@georgebrown.ca
+
+## Acknowledgments
+
+- OpenWeatherMap for providing the weather API
+- George Brown College - COMP3123 Course
+- React documentation and community
+
+---
+
+**Note**: Remember to never commit your `.env` file with actual API keys to version control. The `.env.example` file is provided as a template.
