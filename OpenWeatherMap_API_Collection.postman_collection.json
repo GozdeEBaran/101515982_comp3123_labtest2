@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "101515982-comp3123-labtest2",
+		"name": "101515982 - OpenWeatherMap API - COMP3123 Lab Test 2",
+		"description": "Collection for testing OpenWeatherMap API for Lab Test 2\nStudent ID: 101515982",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Weather - Ankara, Turkey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=Ankara,Turkey&appid={{API_KEY}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Ankara,Turkey",
+							"description": "City name and country code"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}",
+							"description": "Your OpenWeatherMap API key"
+						}
+					]
+				},
+				"description": "Get current weather data for Ankara, Turkey (default city)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather - Ankara, Turkey (Metric Units)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=Ankara,Turkey&appid={{API_KEY}}&units=metric",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Ankara,Turkey"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "units",
+							"value": "metric",
+							"description": "Temperature in Celsius"
+						}
+					]
+				},
+				"description": "Get weather data with temperature in Celsius"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather - Curacao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=Curacao&appid={{API_KEY}}&units=metric",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Curacao"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				},
+				"description": "Test with Curacao - Caribbean island"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather - Aruba",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=Aruba&appid={{API_KEY}}&units=metric",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Aruba"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				},
+				"description": "Test with Aruba - Caribbean island"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather - Bali, Indonesia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=Bali,Indonesia&appid={{API_KEY}}&units=metric",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Bali,Indonesia"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				},
+				"description": "Test with Bali, Indonesia - tropical paradise"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather - Istanbul, Turkey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=Istanbul,Turkey&appid={{API_KEY}}&units=metric",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Istanbul,Turkey"
+						},
+						{
+							"key": "appid",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				},
+				"description": "Test with Istanbul, Turkey"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "API_KEY",
+			"value": "8082417f727a4241ebc352830361da38",
+			"type": "string"
+		}
+	]
+}

@@ -64,7 +64,7 @@
   font-size: 5em;
   margin: 0;
   font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4A90E2 0%, #2E5C8A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -110,7 +110,7 @@
 }
 
 .detail-icon svg {
-  color: #667eea;
+  color: #4A90E2;
 }
 
 .detail-content {
