@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -7,14 +7,14 @@
 }
 
 body {
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #89CFF0 0%, #4A90E2 100%);
+  background: linear-gradient(135deg, #89cff0 0%, #4a90e2 100%);
   padding: 20px;
 }
 
