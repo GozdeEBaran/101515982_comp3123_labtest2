@@ -157,6 +157,21 @@ const response = await axios.get(API_URL, {
 - Visibility
 - Cloudiness percentage
 
+## 🌐 Live Deployment
+
+The application is deployed and accessible at:
+
+**Live URL**: https://101515982-comp3123-labtest2.vercel.app/
+
+**Hosting Platform**: Vercel
+
+The app features:
+
+- Automatic deployment from GitHub
+- Environment variables configured securely
+- Fast global CDN delivery
+- Real-time weather data from OpenWeatherMap API
+
 ## Screenshots
 
 ### Main Interface - Ankara, Turkey
